@@ -1,0 +1,1563 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: PPFragment-SerifRegular;
+    src: url(../fonts/PPFragment-SerifRegular.otf);
+}
+
+@font-face {
+    font-family: PPFragment-SansExtraBold;
+    src: url(../fonts/PPFragment-SansExtraBold.otf);
+}
+
+@font-face {
+    font-family: PPFragment-SerifExtraBold;
+    src: url(../fonts/PPFragment-SerifExtraBold.otf);
+}
+
+@font-face {
+    font-family: PPFragment-SansRegular;
+    src: url(../fonts/PPFragment-SansRegular.otf);
+}
+
+@font-face {
+    font-family: Raleway-Medium;
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@mixin main {
+    margin: 0 auto;
+    height: 1024px;
+    width: 1440px;
+}
+
+@mixin block {
+    margin: 100px auto 0 auto;
+    width: 1240px;
+}
+
+@mixin main2 {
+    margin: 0 auto;
+    width: 390px;
+}
+
+@mixin block2 {
+    margin: 35px auto 0 auto;
+    width: 390px;
+}
+
+@mixin bigblock2 {
+    margin: 0 auto;
+    width: 390px;
+}
+
+@mixin bigblock {
+    margin: 0 auto;
+    width: 1861px;
+}
+
+@mixin center {
+    margin: 0 auto;
+}
+
+//fonts
+@mixin font($ff, $sz, $cl) {
+    font-family: $ff;
+    font-size: $sz * 0.1em;
+    color: $cl;
+}
+
+$ppsr: PPFragment-SerifRegular;
+$ppse: PPFragment-SansExtraBold;
+$ppseb: PPFragment-SerifExtraBold;
+$ppsar: PPFragment-SansRegular;
+$por: Poppins-Regular;
+$rm: Raleway-Medium;
+
+//colors
+$cwhite: #ffffff;
+$cyellow: #fda600;
+$cblue: #0092c1;
+$cdark: #1a181f;
+$cdblue: #264c86;
+$cnwhite: #faf1ea;
+$corange: #ee5e02;
+$ctext: #1b1b1e;
+$cltext: #3c3a38;
+$cbg: #fbfbfb;
+
+@media screen and (min-width: 391px) {
+    .front {
+        @include main;
+        background-color: $cdark;
+        .header {
+            height: 106px;
+            display: flex;
+            align-items: center;
+            .name {
+                margin-left: 100px;
+                height: 35px;
+                width: 116px;
+                p {
+                    @include font($ppse, 34, $cwhite);
+                }
+            }
+            .linkbar {
+                @include center;
+                height: 30px;
+                width: 434px;
+                display: flex;
+                justify-content: space-between;
+                a {
+                    @include font($por, 20, $cwhite);
+                    text-decoration: none;
+                    letter-spacing: -0.01em;
+                }
+            }
+            a {
+                text-decoration: none;
+                .button {
+                    margin-right: 100px;
+                    height: 66px;
+                    width: 163px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 32px;
+                    background-color: $cblue;
+                    p {
+                        @include font($por, 20, $cwhite);
+                        letter-spacing: -0.02em;
+                    }
+                }
+            }
+        }
+        .sitename {
+            @include center;
+            height: 328px;
+            width: 1039px;
+            margin-top: 74px;
+            .name {
+                display: flex;
+                flex-direction: column;
+                height: 220px;
+                .lineI {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    p {
+                        @include font($ppsr, 96, $cwhite);
+                        line-height: 115%;
+                        letter-spacing: -0.01em;
+                    }
+                    .picture {
+                        height: 89px;
+                        width: 222px;
+                        margin-top: 6px;
+                    }
+                    .p2 {
+                        margin-left: -2.95px;
+                    }
+                }
+                .lineII {
+                    @include center;
+                    p {
+                        @include font($ppsr, 96, $cwhite);
+                        line-height: 115%;
+                        letter-spacing: -0.01em;
+                    }
+                }
+            }
+            .description {
+                height: 96px;
+                margin-top: 12px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                opacity: 0.8;
+                p {
+                    @include font($por, 20, $cwhite);
+                    line-height: 160%;
+                    letter-spacing: -0.01em;
+                }
+            }
+        }
+        .imgs {
+            margin-top: 24px;
+            position: relative;
+            .main_img {
+                height: 492px;
+                width: 1440px;
+            }
+            .revievs {
+                position: absolute;
+                top: 29px;
+                left: 1014px;
+                width: 311px;
+                height: 373px;
+                background-color: $cblue;
+                border-radius: 20px;
+                .lI {
+                    @include font($ppseb, 48, $cwhite);
+                    margin: 53px 0 0 36px;
+                    height: 49px;
+                    width: 171px;
+                    letter-spacing: -0.02em;
+                }
+                .lII {
+                    @include font($ppsar, 24, $cwhite);
+                    margin: 13px 0 0 36px;
+                    height: 24px;
+                    width: 211px;
+                    letter-spacing: -0.02em;
+                }
+                .img {
+                    margin: 31px 0 0 36px;
+                    height: 72px;
+                    width: 237px;
+                }
+                .lIII {
+                    margin: 37px 0 0 36px;
+                    img {
+                        height: 41px;
+                        width: 198px;
+                    }
+                }
+            }
+            .arrow {
+                height: 60px;
+                width: 60px;
+                position: absolute;
+                top: 8px;
+                left: 1295px;
+            }
+        }
+    }
+    .first {
+        @include block;
+        height: 625px;
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .tI {
+                height: 118px;
+                width: 476px;
+                @include font($ppsr, 54, $ctext);
+                line-height: 110%;
+            }
+            .tII {
+                height: 128px;
+                width: 503px;
+                @include font($por, 20, $cltext);
+                line-height: 160%;
+                letter-spacing: -0.01em;
+            }
+        }
+        .info {
+            height: 462px;
+            margin-top: 35px;
+            display: flex;
+            justify-content: space-between;
+            .block {
+                height: 462px;
+                width: 394px;
+                border-radius: 20px;
+                background-color: $cbg;
+                .name {
+                    height: 29px;
+                    width: 326px;
+                    text-align: center;
+                    margin: 82px auto 0 auto;
+                    @include font($ppsr, 28, #47494a);
+                    letter-spacing: -0.02em;
+                }
+                .pic {
+                    height: 80px;
+                    width: 80px;
+                    margin: 44px auto 0 auto;
+                }
+                .description {
+                    margin: 61px auto 0 auto;
+                    width: 305px;
+                    height: 84px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        @include font($por, 18, #47494a);
+                        line-height: 155%;
+                        letter-spacing: -0.02em;
+                    }
+                }
+            }
+        }
+    }
+    .second {
+        @include block;
+        margin-top: 86px;
+        height: 823px;
+        .header {
+            height: 272px;
+            display: flex;
+            .title {
+                width: 1050px;
+                @include font($ppsr, 44, $ctext);
+                line-height: 155%;
+            }
+            .button {
+                margin: 206px 0 0 27px;
+                height: 66px;
+                width: 163px;
+                a {
+                    text-decoration: none;
+                    .b {
+                        height: 66px;
+                        width: 163px;
+                        border-radius: 32px;
+                        background-color: $cblue;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include font($por, 20, $cwhite);
+                    }
+                }
+            }
+        }
+        .picture {
+            margin-top: 44px;
+            height: 507px;
+            img {
+                height: 507px;
+                width: 1240px;
+            }
+        }
+    }
+    .third {
+        @include block;
+        height: 612px;
+        .header {
+            height: 59px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .name {
+                width: 301px;
+                height: 59px;
+                p {
+                    @include font($ppsr, 54, $ctext);
+                    line-height: 110%;
+                }
+            }
+            .link {
+                width: 150px;
+                height: 22px;
+                a {
+                    @include font($ppsr, 20, $ctext);
+                    line-height: 110%;
+                    text-decoration: none;
+                }
+            }
+        }
+        .info {
+            height: 507px;
+            margin-top: 46px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .linkbar {
+                height: 464px;
+                width: 608px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .block {
+                    height: 64px;
+                    width: 608px;
+                    border-bottom: 1.17px #000000 solid;
+                    .binfo {
+                        height: 40px;
+                        width: 608px;
+                        display: flex;
+                        align-items: center;
+                        .num {
+                            height: 31px;
+                            width: 47.85px;
+                            display: flex;
+                            justify-content: center;
+                            p {
+                                @include font($ppsr, 28.01, $ctext);
+                                line-height: 110%;
+                            }
+                        }
+                        .text {
+                            margin-left: 11.67px;
+                            height: 40px;
+                            width: 472.63px;
+                            p {
+                                @include font($ppsr, 36, $ctext);
+                                line-height: 110%;
+                            }
+                        }
+                        .arrow {
+                            height: 37.34px;
+                            width: 37.34px;
+                            margin-left: 38.51px;
+                            img {
+                                height: 37.34px;
+                                width: 37.34px;
+                            }
+                        }
+                    }
+                }
+            }
+            .pic {
+                position: relative;
+                height: 507px;
+                width: 608px;
+                .img1 {
+                    height: 507px;
+                    width: 608px;
+                }
+                .link {
+                    position: absolute;
+                    top: 168px;
+                    left: 219px;
+                    height: 171px;
+                    width: 171px;
+                    .img2 {
+                        height: 171px;
+                        width: 171px;
+                    }
+                }
+            }
+        }
+    }
+    .fourth {
+        @include block;
+        height: 1103px;
+        .header {
+            height: 59px;
+            display: flex;
+            justify-content: space-between;
+            .name {
+                height: 59px;
+                width: 384px;
+                p {
+                    @include font($ppsr, 54, $ctext);
+                    line-height: 110%;
+                }
+            }
+            .linkbar {
+                height: 46px;
+                width: 522px;
+                margin-top: 13px;
+                display: flex;
+                justify-content: space-between;
+                a {
+                    text-decoration: none;
+                    @include font($ppsr, 24, $ctext);
+                }
+                .l1 {
+                    height: 46px;
+                    width: 61px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-sizing: border-box;
+                    border: none;
+                    border-bottom: 2px #000000 solid;
+                }
+                .l2 {
+                    height: 46px;
+                    width: 130px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .l3 {
+                    height: 46px;
+                    width: 125px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .l4 {
+                    height: 46px;
+                    width: 134px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        .cards {
+            margin-top: 54px;
+            height: 990px;
+            width: 1240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .lll {
+                display: flex;
+                justify-content: space-between;
+                height: 480.5px;
+                .card {
+                    height: 480.5;
+                    width: 394px;
+                    display: flex;
+                    flex-direction: column;
+                    img {
+                        height: 283px;
+                        width: 394px;
+                    }
+                    .data {
+                        margin-top: 0;
+                        height: 197.5px;
+                        border: none;
+                        box-sizing: border-box;
+                        border-bottom: 1.5px #d9d9d9 solid;
+                        border-left: 1.5px #d9d9d9 solid;
+                        border-right: 1.5px #d9d9d9 solid;
+                        .table {
+                            @include center;
+                            margin-top: 24px;
+                            height: 18.5px;
+                            width: 327px;
+                            display: flex;
+                            justify-content: space-between;
+                            hr {
+                                height: 18.5px;
+                                width: 0;
+                                border: 1px solid rgba(0, 0, 0, 0.4);
+                            }
+                            .td1 {
+                                height: 17px;
+                                width: 78px;
+                                display: flex;
+                                justify-content: space-between;
+                                .tbi {
+                                    height: 17px;
+                                    width: 17px;
+                                }
+                                .tbt {
+                                    @include font($rm, 16, #000000);
+                                }
+                            }
+                            .td2 {
+                                height: 17px;
+                                width: 83px;
+                                display: flex;
+                                justify-content: space-between;
+                                .tbi {
+                                    height: 17px;
+                                    width: 17px;
+                                }
+                                .tbt {
+                                    @include font($rm, 16, #000000);
+                                }
+                            }
+                            .td3 {
+                                height: 17px;
+                                width: 94px;
+                                display: flex;
+                                justify-content: space-between;
+                                .tbi {
+                                    height: 17px;
+                                    width: 17px;
+                                }
+                                .tbt {
+                                    @include font($rm, 16, #000000);
+                                }
+                            }
+                        }
+                        .info {
+                            height: 86px;
+                            width: 311px;
+                            @include center;
+                            margin-top: 45px;
+                            .name {
+                                text-align: center;
+                                @include font($ppsr, 24, #000000);
+                                line-height: 100%;
+                            }
+                            .address {
+                                text-align: center;
+                                margin-top: 6px;
+                                @include font($por, 16, #000000);
+                                line-height: 100%;
+                            }
+                            .cost {
+                                text-align: center;
+                                margin-top: 24px;
+                                @include font($ppsr, 16, $corange);
+                                line-height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .fifth {
+        @include center;
+        width: 1440px;
+        height: 771px;
+        margin-top: 100px;
+        .header {
+            @include center;
+            height: 272px;
+            width: 1240px;
+            display: flex;
+            justify-content: space-between;
+            .name {
+                height: 272px;
+                width: 1050px;
+                p {
+                    @include font($ppsr, 44, $ctext);
+                    line-height: 155%;
+                }
+            }
+            .link {
+                margin-top: 250px;
+                height: 22px;
+                width: 100px;
+                a {
+                    @include font($ppsr, 20, $ctext);
+                    line-height: 110%;
+                    text-decoration: none;
+                }
+            }
+        }
+        .imgbar {
+            @include center;
+            margin-left: -209px;
+            margin-top: 44px;
+            width: 1858px;
+            height: 455px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            img {
+                height: 455px;
+                width: 353px;
+            }
+        }
+    }
+    .sixth {
+        @include block;
+        margin-top: 100px;
+        height: 431px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .header {
+            height: 59px;
+            width: 683px;
+            p {
+                @include font($ppsr, 54, $ctext);
+                line-height: 110%;
+            }
+        }
+        .main {
+            height: 266px;
+            width: 1240px;
+            display: flex;
+            justify-content: space-between;
+            .iI {
+                height: 48px;
+                width: 48px;
+                margin-top: 40px;
+            }
+            .back {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 266px;
+                width: 897px;
+                .text {
+                    width: 897px;
+                    height: 128px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        @include font($por, 20, $cltext);
+                        line-height: 160%;
+                        letter-spacing: -0.01em;
+                    }
+                }
+                .name {
+                    width: 267px;
+                    height: 38px;
+                    margin-left: 630px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    hr {
+                        height: 0;
+                        width: 83px;
+                        color: #000000;
+                    }
+                    p {
+                        @include font($ppsr, 24, #333333);
+                        line-height: 160%;
+                        letter-spacing: -0.01em;
+                    }
+                }
+            }
+        }
+    }
+    .last {
+        background-color: $cdark;
+        @include main;
+        margin-top: 146px;
+        height: 837px;
+        display: flex;
+        flex-direction: column;
+        .title {
+            margin: 80px auto 0 auto;
+            width: 912px;
+            height: 96px;
+            p {
+                @include font($ppsr, 96, $cwhite);
+                letter-spacing: -0.03em;
+                line-height: 100%;
+            }
+        }
+        .middle {
+            @include block;
+            height: 232px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .info {
+                height: 220px;
+                width: 421.57px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .pI {
+                    @include font($ppsr, 56, $cwhite);
+                    line-height: 120%;
+                    letter-spacing: -0.02em;
+                }
+                .pII {
+                    @include font($por, 16, $cwhite);
+                    line-height: 160%;
+                }
+            }
+            a {
+                img {
+                    height: 232px;
+                    width: 232px;
+                    border-radius: 116px;
+                }
+            }
+        }
+        .footer {
+            @include block;
+            height: 138px;
+            margin-top: 66px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .name {
+                height: 35px;
+                width: 116px;
+                p {
+                    @include font($ppse, 34, $cwhite);
+                }
+            }
+            .linkbar {
+                height: 138px;
+                width: 706px;
+                display: flex;
+                justify-content: space-between;
+                .vblock {
+                    display: flex;
+                    flex-direction: column;
+                    p {
+                        @include font($ppsr, 20, $cwhite);
+                        line-height: 110%;
+                        letter-spacing: -0.02em;
+                        margin-bottom: 8.88px;
+                    }
+                    a {
+                        margin-top: 8.87px;
+                        text-decoration: none;
+                        @include font($por, 16, #808080);
+                        line-height: 110%;
+                        letter-spacing: -0.02em;
+                    }
+                }
+            }
+        }
+        hr {
+            margin-top: 46px;
+            border-color: #808080;
+            background-color: #808080;
+        }
+        .siteinfo {
+            margin: 27px auto 0 auto;
+            height: 18px;
+            width: 1248px;
+            display: flex;
+            justify-content: space-between;
+            p {
+                @include font($por, 16, $cwhite);
+                line-height: 110%;
+            }
+            .linkbar {
+                height: 18px;
+                width: 204px;
+                display: flex;
+                justify-content: space-between;
+                a {
+                    text-decoration: none;
+                    @include font($por, 16, $cwhite);
+                    line-height: 110%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .front {
+        @include main2;
+        background-color: $cdark;
+        .header {
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .name {
+                margin-top: 10px;
+                p {
+                    @include font($ppse, 30, $cwhite);
+                }
+            }
+            .linkbar {
+                @include center;
+                width: 390px;
+                display: flex;
+                justify-content: space-around;
+                a {
+                    @include font($por, 20, $cwhite);
+                    text-decoration: none;
+                    letter-spacing: -0.01em;
+                }
+            }
+            a {
+                text-decoration: none;
+                .button {
+                    height: 40px;
+                    width: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 32px;
+                    background-color: $cblue;
+                    p {
+                        @include font($por, 14, $cwhite);
+                        letter-spacing: -0.02em;
+                    }
+                }
+            }
+        }
+        .sitename {
+            @include center;
+            width: 390px;
+            .name {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .lineI {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    p {
+                        @include font($ppsr, 60, $cwhite);
+                        line-height: 125%;
+                        letter-spacing: -0.01em;
+                    }
+                    .picture {
+                        height: 89px;
+                        width: 222px;
+                    }
+                }
+                .lineII {
+                    @include center;
+                    p {
+                        @include font($ppsr, 60, $cwhite);
+                        line-height: 125%;
+                        letter-spacing: -0.01em;
+                    }
+                }
+            }
+            .description {
+                @include center();
+                width: 360px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                opacity: 0.8;
+                p {
+                    @include font($por, 20, $cwhite);
+                    line-height: 160%;
+                    letter-spacing: -0.01em;
+                }
+            }
+        }
+        .imgs {
+            height: 0;
+            width: 0;
+            opacity: 0;
+            .main_img {
+                height: 0;
+                width: 0;
+                opacity: 0;
+            }
+            .revievs {
+                height: 0;
+                width: 0;
+                .lI {
+                    height: 0;
+                    width: 0;
+                }
+                .lII {
+                    height: 0;
+                    width: 0;
+                }
+                .img {
+                    height: 0;
+                    width: 0;
+                }
+                .lIII {
+                    height: 0;
+                    width: 0;
+                    img {
+                        height: 0;
+                        width: 0;
+                    }
+                }
+            }
+            .arrow {
+                height: 0;
+                width: 0;
+                img {
+                    height: 0;
+                    width: 0;
+                }
+            }
+        }
+    }
+    .first {
+        @include block2;
+        //height: 625px;
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .tI {
+                //height: 118px;
+                width: 360px;
+                @include font($ppsr, 30, $ctext);
+                line-height: 110%;
+                text-align: center;
+            }
+            .tII {
+                //height: 128px;
+                width: 360px;
+                @include font($por, 20, $cltext);
+                line-height: 160%;
+                letter-spacing: -0.01em;
+            }
+        }
+        .info {
+            //height: 462px;
+            margin-top: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            //justify-content: space-between;
+            .block {
+                width: 380px;
+                margin-bottom: 20px;
+                border-radius: 20px;
+                background-color: $cbg;
+                .name {
+                    height: 29px;
+                    width: 326px;
+                    text-align: center;
+                    margin: 20px auto 0 auto;
+                    @include font($ppsr, 25, #47494a);
+                    letter-spacing: -0.02em;
+                }
+                .pic {
+                    height: 80px;
+                    width: 80px;
+                    margin: 44px auto 0 auto;
+                }
+                .description {
+                    margin: 30px auto 0 auto;
+                    width: 360px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        @include font($por, 20, #47494a);
+                        line-height: 155%;
+                        letter-spacing: -0.02em;
+                    }
+                }
+            }
+        }
+    }
+    .second {
+        @include block2;
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title {
+                width: 360px;
+                @include font($ppsr, 25, $ctext);
+                line-height: 120%;
+            }
+            .button {
+                margin-top: 20px;
+                height: 66px;
+                width: 163px;
+                a {
+                    text-decoration: none;
+                    .b {
+                        height: 66px;
+                        width: 163px;
+                        border-radius: 32px;
+                        background-color: $cblue;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include font($por, 20, $cwhite);
+                    }
+                }
+            }
+        }
+        .picture {
+            margin: 20px auto 0 auto;
+            height: 154.7px;
+            width: 380px;
+            img {
+                height: 154.7px;
+                width: 380px;
+            }
+        }
+    }
+    .third {
+        @include block2;
+        .header {
+            @include center();
+            width: 360px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .name {
+                p {
+                    @include font($ppsr, 30, $ctext);
+                    line-height: 110%;
+                }
+            }
+            .link {
+                a {
+                    @include font($ppsr, 20, $ctext);
+                    line-height: 110%;
+                    text-decoration: none;
+                }
+            }
+        }
+        .info {
+            margin-top: 46px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .linkbar {
+                width: 390px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .block {
+                    height: 64px;
+                    width: 390px;
+                    border-bottom: 1.17px #000000 solid;
+                    display: flex;
+                    align-items: center;
+                    .binfo {
+                        height: 40px;
+                        width: 390px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        .num {
+                            height: 31px;
+                            width: 47.85px;
+                            display: flex;
+                            justify-content: center;
+                            text-align: center;
+                            p {
+                                @include font($ppsr, 20, $ctext);
+                                line-height: 110%;
+                            }
+                        }
+                        .text {
+                            margin-left: 11.67px;
+                            height: 40px;
+                            width: 250px;
+                            text-align: center;
+                            p {
+                                @include font($ppsr, 20, $ctext);
+                                line-height: 110%;
+                            }
+                        }
+                        .arrow {
+                            height: 37.34px;
+                            width: 37.34px;
+                            margin-left: 38.51px;
+                            img {
+                                height: 37.34px;
+                                width: 37.34px;
+                            }
+                        }
+                    }
+                }
+            }
+            .pic {
+                margin-top: 20px;
+                position: relative;
+                height: 316.9px;
+                width: 380px;
+                .img1 {
+                    height: 316.9px;
+                    width: 380px;
+                }
+                .link {
+                    position: absolute;
+                    top: 113.45px;
+                    left: 145px;
+                    height: 90px;
+                    width: 90px;
+                    .img2 {
+                        height: 90px;
+                        width: 90px;
+                    }
+                }
+            }
+        }
+    }
+    .fourth {
+        @include block2;
+        .header {
+            height: 59px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .name {
+                height: 59px;
+                width: 384px;
+                p {
+                    text-align: center;
+                    @include font($ppsr, 30, $ctext);
+                    line-height: 110%;
+                }
+            }
+            .linkbar {
+                height: 46px;
+                width: 380px;
+                margin-top: 13px;
+                display: flex;
+                justify-content: space-between;
+                a {
+                    text-decoration: none;
+                    @include font($ppsr, 20, $ctext);
+                }
+                .l1 {
+                    height: 46px;
+                    width: 61px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    box-sizing: border-box;
+                    border: none;
+                    border-bottom: 2px #000000 solid;
+                }
+                .l2 {
+                    height: 46px;
+                    width: 130px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .l3 {
+                    height: 46px;
+                    width: 125px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .l4 {
+                    height: 46px;
+                    width: 134px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        .cards {
+            margin-top: 54px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .lll {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .card {
+                    height: 480.5;
+                    width: 380px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+                    img {
+                        height: 272px;
+                        width: 380px;
+                    }
+                    .data {
+                        margin-top: 0;
+                        height: 197.5px;
+                        border: none;
+                        box-sizing: border-box;
+                        border-bottom: 1.5px #d9d9d9 solid;
+                        border-left: 1.5px #d9d9d9 solid;
+                        border-right: 1.5px #d9d9d9 solid;
+                        .table {
+                            @include center;
+                            margin-top: 24px;
+                            height: 18.5px;
+                            width: 327px;
+                            display: flex;
+                            justify-content: space-between;
+                            hr {
+                                height: 18.5px;
+                                width: 0;
+                                border: 1px solid rgba(0, 0, 0, 0.4);
+                            }
+                            .td1 {
+                                height: 17px;
+                                width: 78px;
+                                display: flex;
+                                justify-content: space-between;
+                                .tbi {
+                                    height: 17px;
+                                    width: 17px;
+                                }
+                                .tbt {
+                                    @include font($rm, 16, #000000);
+                                }
+                            }
+                            .td2 {
+                                height: 17px;
+                                width: 83px;
+                                display: flex;
+                                justify-content: space-between;
+                                .tbi {
+                                    height: 17px;
+                                    width: 17px;
+                                }
+                                .tbt {
+                                    @include font($rm, 16, #000000);
+                                }
+                            }
+                            .td3 {
+                                height: 17px;
+                                width: 94px;
+                                display: flex;
+                                justify-content: space-between;
+                                .tbi {
+                                    height: 17px;
+                                    width: 17px;
+                                }
+                                .tbt {
+                                    @include font($rm, 16, #000000);
+                                }
+                            }
+                        }
+                        .info {
+                            height: 86px;
+                            width: 311px;
+                            @include center;
+                            margin-top: 45px;
+                            .name {
+                                text-align: center;
+                                @include font($ppsr, 24, #000000);
+                                line-height: 100%;
+                            }
+                            .address {
+                                text-align: center;
+                                margin-top: 6px;
+                                @include font($por, 16, #000000);
+                                line-height: 100%;
+                            }
+                            .cost {
+                                text-align: center;
+                                margin-top: 24px;
+                                @include font($ppsr, 16, $corange);
+                                line-height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .fifth {
+        @include center;
+        width: 390px;
+        margin-top: 20px;
+        .header {
+            @include center;
+            width: 390px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .name {
+                width: 360px;
+                p {
+                    @include font($ppsr, 30, $ctext);
+                    line-height: 125%;
+                    text-align: center;
+                }
+            }
+            .link {
+                margin-top: 20px;
+                height: 22px;
+                width: 100px;
+                a {
+                    @include font($ppsr, 20, $ctext);
+                    line-height: 110%;
+                    text-decoration: none;
+                }
+            }
+        }
+        .imgbar {
+            @include center;
+            margin-top: 44px;
+            width: 390px;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+            img {
+                height: 97px;
+                width: 75px;
+            }
+        }
+    }
+    .sixth {
+        @include block2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        .header {
+            height: 59px;
+            width: 380px;
+            p {
+                @include font($ppsr, 30, $ctext);
+                line-height: 110%;
+            }
+        }
+        .main {
+            width: 390px;
+            display: flex;
+            justify-content: space-between;
+            .iI {
+                margin-top: 140px;
+                height: 48px;
+                width: 48px;
+            }
+            .back {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 290px;
+                .text {
+                    width: 290px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    p {
+                        @include font($por, 20, $cltext);
+                        line-height: 160%;
+                        letter-spacing: -0.01em;
+                    }
+                }
+                .name {
+                    margin-top: 15px;
+                    width: 267px;
+                    height: 38px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    hr {
+                        height: 0;
+                        width: 83px;
+                        color: #000000;
+                    }
+                    p {
+                        @include font($ppsr, 20, #333333);
+                        line-height: 160%;
+                        letter-spacing: -0.01em;
+                    }
+                }
+            }
+        }
+    }
+    .last {
+        background-color: $cdark;
+        @include main2;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        .title {
+            margin: 20px auto 0 auto;
+            width: 380px;
+            p {
+                @include font($ppsr, 40, $cwhite);
+                letter-spacing: -0.03em;
+                line-height: 100%;
+            }
+        }
+        .middle {
+            @include block2;
+            width: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            .info {
+                width: 360px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .pI {
+                    @include font($ppsr, 25, $cwhite);
+                    line-height: 120%;
+                    letter-spacing: -0.02em;
+                    text-align: center;
+                }
+                .pII {
+                    @include font($por, 14, $cwhite);
+                    line-height: 160%;
+                }
+            }
+            a {
+                img {
+                    height: 0px;
+                    width: 0px;
+                }
+            }
+        }
+        .footer {
+            @include block2;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .name {
+                height: 35px;
+                width: 116px;
+                p {
+                    @include font($ppse, 34, $cwhite);
+                }
+            }
+            .linkbar {
+                width: 390px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .vblock {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 15px;
+                    p {
+                        @include font($ppsr, 20, $cwhite);
+                        line-height: 110%;
+                        letter-spacing: -0.02em;
+                    }
+                    a {
+                        margin-top: 8.87px;
+                        text-decoration: none;
+                        @include font($por, 16, #808080);
+                        line-height: 110%;
+                        letter-spacing: -0.02em;
+                    }
+                }
+            }
+        }
+        hr {
+            margin-top: 20px;
+            border-color: #808080;
+            background-color: #808080;
+        }
+        .siteinfo {
+            margin: 27px auto 0 auto;
+            width: 360px;
+            display: flex;
+            flex-direction: column;
+            p {
+                text-align: center;
+                @include font($por, 16, $cwhite);
+                line-height: 110%;
+            }
+            .linkbar {
+                margin-top: 10px;
+                margin-bottom: 15px;
+                width: 360px;
+                display: flex;
+                justify-content: space-between;
+                a {
+                    text-decoration: none;
+                    @include font($por, 16, $cwhite);
+                    line-height: 110%;
+                }
+            }
+        }
+    }
+}
